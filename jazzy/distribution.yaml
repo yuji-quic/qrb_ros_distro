@@ -5,24 +5,24 @@ repositories:
   lib_mem_dmabuf:
     doc:
       type: git
-      url: https://github.com/quic-qrb-ros/lib_mem_dmabuf
+      url: https://github.com/qualcomm-qrb-ros/lib_mem_dmabuf
       version: main
     release:
       packages:
       - lib_mem_dmabuf
       tags:
         release: {version}
-      url: https://github.com/quic-qrb-ros/lib_mem_dmabuf
+      url: https://github.com/qualcomm-qrb-ros/lib_mem_dmabuf
       version: 1.1.0-jazzy-rc0
     source:
       type: git
-      url: https://github.com/quic-qrb-ros/lib_mem_dmabuf
+      url: https://github.com/qualcomm-qrb-ros/lib_mem_dmabuf
       version: main
     status: developed
   qrb_ros_imu:
     doc:
       type: git
-      url: https://github.com/quic-qrb-ros/qrb_ros_imu
+      url: https://github.com/qualcomm-qrb-ros/qrb_ros_imu
       version: main
     release:
       packages:
@@ -30,17 +30,17 @@ repositories:
       - qrb_sensor_client
       tags:
         release: {version}
-      url: https://github.com/quic-qrb-ros/qrb_ros_imu
+      url: https://github.com/qualcomm-qrb-ros/qrb_ros_imu
       version: 0.1.0-jazzy-rc0
     source:
       type: git
-      url: https://github.com/quic-qrb-ros/qrb_ros_imu
+      url: https://github.com/qualcomm-qrb-ros/qrb_ros_imu
       version: main
     status: developed
   qrb_ros_interfaces:
     doc:
       type: git
-      url: https://github.com/quic-qrb-ros/qrb_ros_interfaces
+      url: https://github.com/qualcomm-qrb-ros/qrb_ros_interfaces
       version: main
     release:
       packages:
@@ -57,17 +57,17 @@ repositories:
       - qrb_ros_vision_msgs
       tags:
         release: {version}
-      url: https://github.com/quic-qrb-ros/qrb_ros_interfaces
+      url: https://github.com/qualcomm-qrb-ros/qrb_ros_interfaces
       version: 0.1.0-jazzy-rc1
     source:
       type: git
-      url: https://github.com/quic-qrb-ros/qrb_ros_interfaces
+      url: https://github.com/qualcomm-qrb-ros/qrb_ros_interfaces
       version: main
     status: developed
   qrb_ros_nn_inference:
     doc:
       type: git
-      url: https://github.com/quic-qrb-ros/qrb_ros_nn_inference
+      url: https://github.com/qualcomm-qrb-ros/qrb_ros_nn_inference
       version: main
     release:
       packages:
@@ -75,17 +75,17 @@ repositories:
       - qrb_ros_nn_inference
       tags:
         release: {version}
-      url: https://github.com/quic-qrb-ros/qrb_ros_nn_inference
+      url: https://github.com/qualcomm-qrb-ros/qrb_ros_nn_inference
       version: 1.0.0-jazzy-rc0
     source:
       type: git
-      url: https://github.com/quic-qrb-ros/qrb_ros_nn_inference
+      url: https://github.com/qualcomm-qrb-ros/qrb_ros_nn_inference
       version: main
     status: developed
   qrb_ros_system_monitor:
     doc:
       type: git
-      url: https://github.com/quic-qrb-ros/qrb_ros_system_monitor
+      url: https://github.com/qualcomm-qrb-ros/qrb_ros_system_monitor
       version: main
     release:
       packages:
@@ -93,17 +93,17 @@ repositories:
       - qrb_ros_system_monitor_interfaces
       tags:
         release: {version}
-      url: https://github.com/quic-qrb-ros/qrb_ros_system_monitor
+      url: https://github.com/qualcomm-qrb-ros/qrb_ros_system_monitor
       version: 1.1.0-jazzy-rc0
     source:
       type: git
-      url: https://github.com/quic-qrb-ros/qrb_ros_system_monitor
+      url: https://github.com/qualcomm-qrb-ros/qrb_ros_system_monitor
       version: main
     status: developed
   qrb_ros_transport:
     doc:
       type: git
-      url: https://github.com/quic-qrb-ros/qrb_ros_transport
+      url: https://github.com/qualcomm-qrb-ros/qrb_ros_transport
       version: main
     release:
       packages:
@@ -113,10 +113,10 @@ repositories:
       - qrb_ros_transport_test
       tags:
         release: {version}
-      url: https://github.com/quic-qrb-ros/qrb_ros_transport
+      url: https://github.com/qualcomm-qrb-ros/qrb_ros_transport
       version: 1.3.0-jazzy-rc0
     source:
       type: git
-      url: https://github.com/quic-qrb-ros/qrb_ros_transport
+      url: https://github.com/qualcomm-qrb-ros/qrb_ros_transport
       version: main
     status: developed
