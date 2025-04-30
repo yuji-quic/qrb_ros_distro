@@ -10,7 +10,7 @@ repositories:
   qrb_ros_imu:
     type: git
     url: https://github.com/qualcomm-qrb-ros/qrb_ros_imu
-    version: 0.1.0-jazzy-rc1
+    version: 0.1.0-jazzy-rc2
   qrb_ros_interfaces:
     type: git
     url: https://github.com/qualcomm-qrb-ros/qrb_ros_interfaces
