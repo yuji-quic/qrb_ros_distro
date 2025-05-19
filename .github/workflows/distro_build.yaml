@@ -112,7 +112,7 @@ jobs:
           build_dir=${PERSIST_DIR}/builds/${GITHUB_RUN_ID}
           mkdir -p $build_dir
 
-          tar -cvf ${{ github.event.repository.name }}-${MACHINE}-${DISTRO}-${QCOM_SELECTED_BSP}-artifacts.tar --transform "s|^${WORKSPACE}/||" -C ${WORKSPACE} install
+          tar -cvf ${{ github.event.repository.name }}-${MACHINE}-${DISTRO}-${QCOM_SELECTED_BSP}-artifacts.tar --transform "s|^${WORKSPACE}/||" -C ${WORKSPACE}/install .
           cp -rf ${{ github.event.repository.name }}-${MACHINE}-${DISTRO}-${QCOM_SELECTED_BSP}-artifacts.tar $build_dir
 
           ##########################debug###############################
