@@ -4,6 +4,9 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+  schedule:
+  # Every weekday 8:00 UTC+8
+  - cron: '0 0 * * 1-5'
 
 env:
   PERSIST_DIR: /srv/gh-runners/qualcomm-qrb-ros
@@ -57,6 +60,8 @@ jobs:
         with:
           fetch-depth: 0
           path: ${{ github.workspace }}/${{ github.event.repository.name }}
+          ref: ${{ github.event_name == 'schedule' && 'develop' || github.head_ref || github.ref_name }}
+
       - name: Sync and build
         run: |
           ls ${{ github.workspace }}
