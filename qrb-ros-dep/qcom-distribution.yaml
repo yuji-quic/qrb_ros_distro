@@ -1,0 +1,33 @@
+dmabuf_transport:
+  ubuntu:
+    noble: [ros-jazzy-dmabuf-transport]
+libqnn1:
+  ubuntu:
+    noble: [libqnn1]
+libqnn-dev:
+  ubuntu:
+    noble: [libqnn-dev]
+libtensorflow-lite-c-qcom1:
+  ubuntu:
+    noble: [libtensorflow-lite-c-qcom1]
+libtensorflow-lite-qcom-dev:
+  ubuntu:
+    noble: [libtensorflow-lite-qcom-dev]
+lib_mem_dmabuf:
+  ubuntu:
+    noble: [ros-jazzy-lib-mem-dmabuf]
+qrb_sensor_client:
+  ubuntu:
+    noble: [ros-jazzy-qrb-sensor-client]
+qrb_ros_system_monitor_interfaces:
+  ubuntu:
+    noble: [ros-jazzy-qrb-ros-system-monitor-interfaces]
+qrb_ros_transport_image_type:
+  ubuntu:
+    noble: [ros-jazzy-qrb-ros-transport-image-type]
+qrb_ros_transport_imu_type:
+  ubuntu:
+    noble: [ros-jazzy-qrb-ros-transport-imu-type]
+qrb_ros_transport_point_cloud2_type:
+  ubuntu:
+    noble: [ros-jazzy-qrb-ros-transport-point-cloud2-type]
