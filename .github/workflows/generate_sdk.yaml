@@ -46,7 +46,7 @@ env:
 
 jobs:
   build-sdk:
-    runs-on: [self-hosted, qcom-u2404, amd64]
+    runs-on: [self-hosted, qcom-u2404, amd64, amd64-16x]
     timeout-minutes: 7200
     strategy:
       fail-fast: false
