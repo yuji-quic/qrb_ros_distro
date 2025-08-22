@@ -40,3 +40,6 @@ qrb_ros_nn_inference:
 qrb_ros_yolo_process:
   ubuntu:
     noble: [ros-jazzy-qrb-ros-yolo-process]
+qrb_ros_tensor_list_msgs:
+  ubuntu:
+    noble: [ros-jazzy-qrb-ros-tensor-list-msgs]
