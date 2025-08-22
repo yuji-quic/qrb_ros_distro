@@ -31,3 +31,12 @@ qrb_ros_transport_imu_type:
 qrb_ros_transport_point_cloud2_type:
   ubuntu:
     noble: [ros-jazzy-qrb-ros-transport-point-cloud2-type]
+qrb_ros_camera:
+  ubuntu:
+    noble: [ros-jazzy-qrb-ros-camera]
+qrb_ros_nn_inference:
+  ubuntu:
+    noble: [ros-jazzy-qrb-ros-nn-inference]
+qrb_ros_yolo_process:
+  ubuntu:
+    noble: [ros-jazzy-qrb-ros-yolo-process]
