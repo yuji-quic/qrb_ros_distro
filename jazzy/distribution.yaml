@@ -75,7 +75,7 @@ repositories:
       tags:
         release: {version}
       url: https://github.com/qualcomm-qrb-ros/qrb_ros_nn_inference
-      version: 1.0.0-jazzy
+      version: 1.1.0-jazzy
     source:
       type: git
       url: https://github.com/qualcomm-qrb-ros/qrb_ros_nn_inference

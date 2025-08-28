@@ -18,7 +18,7 @@ repositories:
   qrb_ros_nn_inference:
     type: git
     url: https://github.com/qualcomm-qrb-ros/qrb_ros_nn_inference
-    version: 1.0.0-jazzy
+    version: 1.1.0-jazzy
   qrb_ros_system_monitor:
     type: git
     url: https://github.com/qualcomm-qrb-ros/qrb_ros_system_monitor
