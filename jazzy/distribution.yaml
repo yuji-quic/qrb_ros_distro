@@ -45,10 +45,9 @@ repositories:
     release:
       packages:
       - qrb_ros_amr_msgs
+      - qrb_ros_audio_common_msgs
       - qrb_ros_audio_service_msgs
-      - qrb_ros_manipulator_base_msgs
       - qrb_ros_navigation_msgs
-      - qrb_ros_robot_arm_service_msgs
       - qrb_ros_robot_base_msgs
       - qrb_ros_sensor_service_msgs
       - qrb_ros_slam_msgs
@@ -58,7 +57,7 @@ repositories:
       tags:
         release: {version}
       url: https://github.com/qualcomm-qrb-ros/qrb_ros_interfaces
-      version: 0.1.0-jazzy
+      version: 0.2.0-jazzy
     source:
       type: git
       url: https://github.com/qualcomm-qrb-ros/qrb_ros_interfaces

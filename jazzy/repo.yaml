@@ -14,7 +14,7 @@ repositories:
   qrb_ros_interfaces:
     type: git
     url: https://github.com/qualcomm-qrb-ros/qrb_ros_interfaces
-    version: 0.1.0-jazzy
+    version: 0.2.0-jazzy
   qrb_ros_nn_inference:
     type: git
     url: https://github.com/qualcomm-qrb-ros/qrb_ros_nn_inference
