@@ -1,3 +1,18 @@
+
+# 0.2.0 (2025-09-01)
+## Added
+- No new repo added.
+
+## Changed
+- The development OS is being updated to Ubuntu 24.04.
+- Versions update.
+
+## Removed
+| Repo Name         | Justification                      |
+| ----------------- | ---------------------------------- |
+| qrb_ros_docker    | Out of scope on Ubuntu OS          |
+| qrb_ros_imu       | Dependency is not ready on Ubuntu  |
+
 # 0.1.0-jazzy (2025-05-19)
 Initial distribution of QRB ROS based on ROS 2 jazzy.
 ## Repositories
