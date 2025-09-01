@@ -1,0 +1,63 @@
+name: Build QRB ROS packages on Ubuntu
+on:
+  push:
+  pull_request:
+
+jobs:
+  ros-build:
+    runs-on: [ubuntu-24.04-arm]
+    container: ros:jazzy
+    env:
+        ROS_WS: ${{ github.workspace }}/ros2_ws/
+        ROS_SRC: ${{ github.workspace }}/ros2_ws/src
+    steps:
+      - name: Update and install extra packages
+        run: |
+          # Add QCOM PPA
+          sudo apt-get update
+          sudo apt-get install -y software-properties-common
+          sudo add-apt-repository ppa:ubuntu-qcom-iot/qcom-noble-ppa
+          sudo add-apt-repository ppa:ubuntu-qcom-iot/qirp
+          sudo apt update -y && sudo apt upgrade -y
+          sudo apt install -y tree python3-vcstool
+
+      - name: Checkout source code
+        uses: actions/checkout@v4
+        with:
+          path: ${{ env.ROS_SRC }}/${{ github.event.repository.name }}
+
+      - name: Download Source
+        run: |
+          vcs import --input ${ROS_SRC}/${{ github.event.repository.name }}/jazzy/repo.yaml ${ROS_SRC}
+
+      - name: Check ROS dependency
+        shell: bash
+        run: |
+          if [ -f /etc/ros/rosdep/sources.list.d/20-default.list ];then
+            echo "yaml file://${ROS_SRC}/${{ github.event.repository.name }}/qrb-ros-dep/qcom-distribution.yaml" | sudo tee -a /etc/ros/rosdep/sources.list.d/20-default.list
+          fi
+          source /opt/ros/jazzy/setup.sh
+          sudo rosdep update
+          sudo rosdep install -y --rosdistro jazzy --from-paths ${ROS_SRC} --ignore-src
+
+      - name: Build ROS packages
+        shell: bash
+        run: |
+          cd ${ROS_WS}
+          source /opt/ros/jazzy/setup.sh
+          colcon build
+
+      - name: Stage build artifacts for publishing
+        continue-on-error: true
+        run: |
+          build_dir=./uploads
+          mkdir -p $build_dir
+
+          tar -cvf "${build_dir}/${{ github.event.repository.name }}-ubuntu-artifacts.tar" --transform "s|^${ROS_WS}/||" -C "${ROS_WS}" install build log
+
+      - name: Upload private artifacts
+        continue-on-error: true
+        uses: qualcomm-linux/upload-private-artifact-action@v1
+        with:
+          path: ./uploads
+          fileserver_url: "https://quic-qrt-ros-fileserver-1029608027416.us-central1.run.app"
