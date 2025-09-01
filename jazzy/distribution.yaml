@@ -19,24 +19,6 @@ repositories:
       url: https://github.com/qualcomm-qrb-ros/lib_mem_dmabuf
       version: main
     status: developed
-  qrb_ros_imu:
-    doc:
-      type: git
-      url: https://github.com/qualcomm-qrb-ros/qrb_ros_imu
-      version: main
-    release:
-      packages:
-      - qrb_ros_imu
-      - qrb_sensor_client
-      tags:
-        release: {version}
-      url: https://github.com/qualcomm-qrb-ros/qrb_ros_imu
-      version: 1.2.0-jazzy
-    source:
-      type: git
-      url: https://github.com/qualcomm-qrb-ros/qrb_ros_imu
-      version: main
-    status: developed
   qrb_ros_interfaces:
     doc:
       type: git
