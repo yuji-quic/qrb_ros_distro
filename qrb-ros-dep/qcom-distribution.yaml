@@ -46,3 +46,6 @@ qrb_ros_tensor_list_msgs:
 qrb_ros_slam_msgs:
   ubuntu:
     noble: [ros-jazzy-qrb-ros-slam-msgs]
+qrb_ros_vision_msgs:
+  ubuntu:
+    noble: [ros-jazzy-qrb-ros-vision-msgs]
