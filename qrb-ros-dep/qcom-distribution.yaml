@@ -49,3 +49,9 @@ qrb_ros_slam_msgs:
 qrb_ros_vision_msgs:
   ubuntu:
     noble: [ros-jazzy-qrb-ros-vision-msgs]
+libqrb-video-v4l2:
+  ubuntu:
+    noble: [libqrb-video-v4l2-1]
+libqrb-video-v4l2-dev:
+  ubuntu:
+    noble: [libqrb-video-v4l2-dev]
