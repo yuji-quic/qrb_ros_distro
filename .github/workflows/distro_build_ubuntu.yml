@@ -2,6 +2,10 @@ name: Build QRB ROS packages on Ubuntu
 on:
   push:
   pull_request:
+  workflow_dispatch:
+  schedule:
+  # Every weekday 8:00 UTC+8
+  - cron: '0 0 * * 1-5'
 
 jobs:
   ros-build:
@@ -24,7 +28,9 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           path: ${{ env.ROS_SRC }}/${{ github.event.repository.name }}
+          ref: ${{ github.event_name == 'schedule' && 'develop' || github.event_name == 'workflow_dispatch'  && 'develop' || github.head_ref || github.ref_name }}
 
       - name: Download Source
         run: |
