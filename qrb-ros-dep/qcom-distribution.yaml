@@ -55,3 +55,12 @@ libqrb-video-v4l2:
 libqrb-video-v4l2-dev:
   ubuntu:
     noble: [libqrb-video-v4l2-dev]
+camxapi-dev:
+  ubuntu:
+    noble: [qcom-camxapi-dev]
+libqmmf-dev:
+  ubuntu:
+    noble: [libqmmf-dev]
+syslog-plumber-dev:
+  ubuntu:
+    noble: [qcom-syslog-plumber-dev]
