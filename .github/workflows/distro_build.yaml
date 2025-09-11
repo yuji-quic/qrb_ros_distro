@@ -2,7 +2,13 @@ name: QRB ROS distribution build
 
 on:
   push:
+    paths:
+      - '**'
+      - '!qrb-ros-dep/'
   pull_request:
+    paths:
+      - '**'
+      - '!qrb-ros-dep/'
   workflow_dispatch:
   schedule:
   # Every weekday 8:00 UTC+8
