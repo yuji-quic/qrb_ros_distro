@@ -64,3 +64,6 @@ libqmmf-dev:
 syslog-plumber-dev:
   ubuntu:
     noble: [qcom-syslog-plumber-dev]
+qcom-adreno-dev:
+  ubuntu:
+    noble: [qcom-adreno-dev]
