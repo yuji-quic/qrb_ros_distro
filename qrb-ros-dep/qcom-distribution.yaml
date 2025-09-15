@@ -67,3 +67,9 @@ syslog-plumber-dev:
 qcom-adreno-dev:
   ubuntu:
     noble: [qcom-adreno-dev]
+ros2_benchmark_interfaces:
+  ubuntu: [ros-jazzy-ros2-benchmark-interfaces]
+ros2_benchmark:
+  ubuntu: [ros-jazzy-ros2-benchmark]
+qrb_ros_benchmark:
+  ubuntu: [ros-jazzy-qrb-ros-benchmark]
