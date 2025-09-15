@@ -23,14 +23,14 @@ jobs:
           sudo add-apt-repository ppa:ubuntu-qcom-iot/qcom-noble-ppa
           sudo add-apt-repository ppa:ubuntu-qcom-iot/qirp
           sudo apt update -y && sudo apt upgrade -y
-          sudo apt install -y tree python3-vcstool
+          sudo apt install -y tree python3-vcstool wget
 
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           path: ${{ env.ROS_SRC }}/${{ github.event.repository.name }}
-          ref: ${{ github.event_name == 'schedule' && 'develop' || github.event_name == 'workflow_dispatch'  && 'develop' || github.head_ref || github.ref_name }}
+          ref: ${{ github.event_name == 'schedule' && 'develop' || github.event_name == 'workflow_dispatch'  && 'develop' || null }}
 
       - name: Download Source
         run: |
@@ -39,8 +39,9 @@ jobs:
       - name: Check ROS dependency
         shell: bash
         run: |
+          wget https://raw.githubusercontent.com/qualcomm-qrb-ros/qrb_ros_distro/refs/heads/main/qrb-ros-dep/qcom-distribution.yaml -O ${ROS_SRC}/qcom-distribution.yaml
           if [ -f /etc/ros/rosdep/sources.list.d/20-default.list ];then
-            echo "yaml file://${ROS_SRC}/${{ github.event.repository.name }}/qrb-ros-dep/qcom-distribution.yaml" | sudo tee -a /etc/ros/rosdep/sources.list.d/20-default.list
+            echo "yaml file://${ROS_SRC}/qcom-distribution.yaml" | sudo tee -a /etc/ros/rosdep/sources.list.d/20-default.list
           fi
           source /opt/ros/jazzy/setup.sh
           sudo rosdep update
