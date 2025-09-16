@@ -16,9 +16,15 @@ libtensorflow-lite-qcom-dev:
 lib_mem_dmabuf:
   ubuntu:
     noble: [ros-jazzy-lib-mem-dmabuf]
+qrb_yolo_process:
+  ubuntu:
+    noble: [ros-jazzy-qrb-yolo-process]
 qrb_sensor_client:
   ubuntu:
     noble: [ros-jazzy-qrb-sensor-client]
+qrb_ros_cv_tensor_common_process:
+  ubuntu:
+    noble: [ros-jazzy-qrb-ros-cv-tensor-common-process]
 qrb_ros_system_monitor_interfaces:
   ubuntu:
     noble: [ros-jazzy-qrb-ros-system-monitor-interfaces]
