@@ -95,3 +95,5 @@ libpulse-dev:
   ubuntu: [libpulse-dev]
 libsndfile1-dev:
   ubuntu: [libsndfile1-dev]
+qrb_colorspace_convert_lib:
+  ubuntu: [ros-jazzy-qrb-colorspace-convert-lib]
