@@ -79,3 +79,19 @@ ros2_benchmark:
   ubuntu: [ros-jazzy-ros2-benchmark]
 qrb_ros_benchmark:
   ubuntu: [ros-jazzy-qrb-ros-benchmark]
+qrb_ros_audio_common_msgs:
+  ubuntu: [ros-jazzy-qrb-ros-audio-common-msgs]
+qrb_ros_audio_service_msgs:
+  ubuntu: [ros-jazzy-qrb-ros-audio-service-msgs]
+qrb_audio_common_lib:
+  ubuntu: [qrb-audio-common-lib]
+qrb_audio_manager:
+  ubuntu: [qrb-audio-manager]
+qrb_audio_common_lib:
+  ubuntu: [qrb-audio-common-lib]
+qrb_audio_manager:
+  ubuntu: [qrb-audio-manager]
+libpulse-dev:
+  ubuntu: [libpulse-dev]
+libsndfile1-dev:
+  ubuntu: [libsndfile1-dev]
