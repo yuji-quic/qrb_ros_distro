@@ -9,7 +9,7 @@ on:
 
 jobs:
   ros-build:
-    runs-on: [ubuntu-24.04-arm]
+    runs-on: [self-hosted, qcom-u2404, arm64, arm64-8x]
     container: ros:jazzy
     env:
         ROS_WS: ${{ github.workspace }}/ros2_ws/
@@ -20,7 +20,7 @@ jobs:
           # Add QCOM PPA
           sudo apt-get update
           sudo apt-get install -y software-properties-common
-          sudo add-apt-repository ppa:ubuntu-qcom-iot/qcom-noble-ppa
+          sudo add-apt-repository ppa:ubuntu-qcom-iot/qcom-ppa
           sudo add-apt-repository ppa:ubuntu-qcom-iot/qirp
           sudo apt update -y && sudo apt upgrade -y
           sudo apt install -y tree python3-vcstool wget
