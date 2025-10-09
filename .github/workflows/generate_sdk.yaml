@@ -91,7 +91,7 @@ jobs:
           # Get latest version
           git clone https://github.com/qualcomm-linux/qcom-manifest.git -b qcom-linux-scarthgap
 
-          latest_manifest=$(find ./qcom-manifest -type f -name 'qcom-[0-9]*.[0-9]*.[0-9]*-QLI.[0-9]*.[0-9]*-Ver.[0-9]*.[0-9]*_robotics-product-sdk-[0-9]*.[0-9]*.xml' | awk -F'./qcom-manifest/' '{print $2}' | sort -V | tail -n 1)
+          latest_manifest=$(find ./qcom-manifest -type f -name 'qcom-[0-9]*.[0-9]*.[0-9]*-QLI.[0-9]*.[0-9]*-Ver.[0-9]*.[0-9]*_robotics*-sdk-[0-9]*.[0-9]*.xml' | awk -F'./qcom-manifest/' '{print $2}' | sort -V | tail -n 1)
           if [ -z "${latest_manifest}" ];then
             latest_manifest=${MANIFEST}
           fi
