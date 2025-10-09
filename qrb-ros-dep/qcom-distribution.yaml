@@ -70,6 +70,9 @@ libqmmf-dev:
 syslog-plumber-dev:
   ubuntu:
     noble: [qcom-syslog-plumber-dev]
+camera-server:
+  ubuntu:
+    noble: [qcom-camera-server]
 qcom-adreno-dev:
   ubuntu:
     noble: [qcom-adreno-dev]
