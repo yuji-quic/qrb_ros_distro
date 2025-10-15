@@ -19,3 +19,7 @@ repositories:
     type: git
     url: https://github.com/qualcomm-qrb-ros/qrb_ros_transport
     version: 1.3.1-jazzy
+  qrb_ros_samples:
+    type: git
+    url: https://github.com/qualcomm-qrb-ros/qrb_ros_samples.git
+    version: release/20251015

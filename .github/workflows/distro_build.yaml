@@ -115,6 +115,13 @@ jobs:
           echo "Ignore list:" "${ignore_list[@]}"
 
           cd ${WORKSPACE}
+          if find . -name "build.sh" -type f | grep -q .; then
+              find . -name "build.sh" -type f -exec bash {} \;
+              echo "build.sh found in current directory or subdirectories, build pick and place sample" >&2
+          else
+              echo "ERROR: build.sh not found in current directory or subdirectories, skip build pick and place sample" >&2
+          fi
+
           colcon build --packages-ignore "${ignore_list[@]}" --merge-install --cmake-args \
             -DPython3_ROOT_DIR=${OECORE_TARGET_SYSROOT}/usr \
             -DPython3_NumPy_INCLUDE_DIR=${OECORE_TARGET_SYSROOT}/usr/lib/python3.12/site-packages/numpy/core/include \
