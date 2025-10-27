@@ -1,3 +1,9 @@
+ncnn:
+  ubuntu:
+    noble: [ncnn]
+ncnn-dev:
+  ubuntu:
+    noble: [ncnn-dev]
 dmabuf_transport:
   ubuntu:
     noble: [ros-jazzy-dmabuf-transport]
