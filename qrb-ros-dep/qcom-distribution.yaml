@@ -1,3 +1,6 @@
+ros-jazzy-follow-me:
+  ubuntu:
+    noble: [ros-jazzy-follow-me]
 ncnn:
   ubuntu:
     noble: [ncnn]
